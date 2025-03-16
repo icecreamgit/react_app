@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import MainCard from './components/MainCard'
 import './App.css';
 
-function App() {
+const App = () => {
+  const handleConsoleLogNum = (num: number) => {
+      console.log('Hello, dude!')
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <MainCard 
+            width={'400px'}
+            height={'400px'}
+            handleConsoleLogNum={handleConsoleLogNum}>
+              <button>
+                Перейти на следующую страницу
+              </button>
+        </MainCard>
     </div>
-  );
+  )
 }
+
 
 export default App;
