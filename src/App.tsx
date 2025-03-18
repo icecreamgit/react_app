@@ -1,6 +1,6 @@
 import React from 'react';
 import MainCard from './components/MainCard'
-import './App.css';
+//import './App.css';
 
 const App = () => {
   const handleConsoleLogNum = (num: number) => {
@@ -10,12 +10,9 @@ const App = () => {
   return (
     <div>
         <MainCard 
-            width={'400px'}
-            height={'400px'}
+            width={'100%'}
+            height={'100%'}
             handleConsoleLogNum={handleConsoleLogNum}>
-              <button>
-                Перейти на следующую страницу
-              </button>
         </MainCard>
     </div>
   )
