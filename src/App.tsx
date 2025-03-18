@@ -4,7 +4,7 @@ import './App.css';
 
 const App = () => {
   const handleConsoleLogNum = (num: number) => {
-      console.log('Hello, dude!')
+      console.log(num)
   }
 
   return (
