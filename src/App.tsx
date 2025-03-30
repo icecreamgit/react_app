@@ -1,6 +1,7 @@
 import React from 'react';
 import MainCard from './components/MainCard'
-//import './App.css';
+import { Routes, Route, Link } from "react-router-dom"
+import FunctionalElement from './components/FunctionalElement';
 
 const App = () => {
   const handleConsoleLogNum = (num: number) => {
@@ -9,13 +10,16 @@ const App = () => {
 
   return (
     <div>
-        <MainCard 
-            width={'100%'}
-            height={'100%'}
-            handleConsoleLogNum={handleConsoleLogNum}>
-        </MainCard>
+      <header>
+        <Link to="/">MainCard</Link>
+        <Link to="/FunctionalElement">FunctionalElement</Link>
+      </header>
+        <Routes>
+            <Route path="/" element={<MainCard  width={'100%'} height={'100%'} handleConsoleLogNum={handleConsoleLogNum} />} />
+            <Route path='/FunctionalElement' element={<FunctionalElement name='Aboba' />} />
+        </Routes>
     </div>
-  )
+  );
 }
 
 
